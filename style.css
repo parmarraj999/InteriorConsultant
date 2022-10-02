@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:ital,wght@0,500;1,400&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lora', serif;
+    font-family: 'Montserrat',sans-serif;
+  }
+:root{
+    --black:#181719;
+    --grey:#a9a9a9;
+}
+/* list font size 18px ,12, 14,48, 24*/
+/* font family Montserrat in p of left header, read buton,   */
+/* import font lora for main heading , of box heading bold */
+.container{
+    width: 90%;
+    margin:0 auto;
+}
+header{
+    width: 100%;
+    height: 100vh;
+    background: var(--black);
+    display: flex;
+}
+.header-container{
+    display: grid;
+    grid-template-rows: 1.5fr 11fr .5fr;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* --------- nav ---------  */
+nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo{
+    width: auto;
+    padding: 0 12px;
+    font-size: 14px;
+    border: 1px solid white;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+
+}
+nav ul{
+    display: flex;
+    gap: 4rem;
+}
+nav ul li{
+    list-style: none;
+    color: rgb(189, 189, 189);
+    font-size: 18px;
+    transition: .4s all;
+    cursor: pointer;
+}
+.active {
+    border-bottom: 3px solid white;
+    color: white;
+}
+/* ---------  footer ---  */
+footer{
+    width: 100%;
+    height: 1rem;
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    color: rgb(189, 189, 189);
+    font-size: 14px;
+    word-spacing: 2px ;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+/* ----------- main ----  */
+main{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+.left,.right{
+    width: 100%;
+}
+.left{
+    align-items: flex-start;
+    color: white;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.left h1{
+    font-size: 48px;
+    font-family: 'Lora', sans;
+    font-weight: 500;
+}
+.left p{
+    font-size: 24px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 400;
+    line-height: 29px;
+    /* width: 330px; */
+}
+.left a{
+    font-size: 18px;
+    font-weight: 700;    
+    font-family: 'Montserrat',sans-serif;
+    font-style: normal;
+}
+/* --- right main ----  */
+.right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.right .img-box{
+    width: 100%;
+    height: 400px;
+    background-image: url(img/photo1.png);
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+.right .box{
+    width: 320px;
+    height: 150px;
+    background: var(--black);
+    box-shadow: 8px 4px 4px rgba(0,0,0,0.25);
+    margin-top: -80px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.profile{
+    display: flex;
+    gap: 1.2rem;
+    height: 100%;
+    align-items: center;
+    padding: 0 1rem;
+}
+.profile img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.profile .details h3{
+    font-size: 14px ;
+    font-family: 'Lora',sans;
+    font-weight: 500;
+    color: white;
+}
+.profile .details p{
+    font-size: 12px ;
+    font-family: 'Lora',sans;
+    font-weight: 500;
+    color: var(--grey);
+    line-height: 29px;
+}
+.content{
+    height: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 500;
+    color: white;
+}
+.openBtn{
+    display: none;
+}
+@media screen and (max-width:750px) {
+    .container{
+        width: 96%;
+    }
+    main{
+        height: 100%;
+        display: flex;
+        gap: 4rem;
+        flex-direction: column;
+    }
+    .left{
+        gap: 2rem;
+    }
+    .left a{
+        font-size: 24px;
+    }
+    nav ul {
+        display: none;
+    }
+    .logo{
+        font-size: 35px;
+    }
+    img{
+        width: 100%;
+    }
+    .right .box{
+        width: 85%;
+        margin-left: 20px;
+        margin-top: -50px;
+    }
+    .box .profile .details h3{
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .box .profile .details p{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    footer{
+        font-size: 22px;
+    }
+    .openBtn{
+        display: block;
+    }
+}
+.nav-2{
+    width: 100%;
+    height: 100vh;
+    background: var(--black);
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.cross-icon{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.img-place{
+    width: 50px;
+    height: 50px;
+}
+.list-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list-container ul{
+    color:rgb(189, 189, 189);
+    flex-direction: column;
+    font-size: 2.2rem;
+    gap: 3.2rem;
+}
+li {
+    list-style:none;
+}
